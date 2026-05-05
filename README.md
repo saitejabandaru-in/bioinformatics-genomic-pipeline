@@ -100,8 +100,6 @@ Transformation (VCF → Parquet)
 ↓
 Cloud Storage (S3 / GCS)
 
-```id="genflow1"
-
 ---
 
 ## 🏗 Project Structure
@@ -142,7 +140,7 @@ genomic-data-pipeline/
 ├── requirements.txt
 └── README.md
 
-````id="genstruct1"
+```
 
 ---
 
@@ -150,9 +148,9 @@ genomic-data-pipeline/
 
 ### Clone repository
 ```bash
-git clone https://github.com/yourusername/genomic-data-pipeline.git
-cd genomic-data-pipeline
-````
+git clone https://github.com/saitejabandaru-in/bioinformatics-genomic-pipeline.git
+cd bioinformatics-genomic-pipeline
+```
 
 ### Install dependencies
 
@@ -162,14 +160,14 @@ pip install -r requirements.txt
 
 ### Configure pipeline
 
-```bash id="gencfg1"
+```bash
 cp config/pipeline_config.yaml.example config/pipeline_config.yaml
 ```
 
 ### Run QC on sample
 
-```bash id="genrun1"
-python -m pipeline.qc.fastqc_runner --input data/sample.fastq.gz
+```bash
+python -m pipeline.qc.fastqc_runner --input data/sample.fastq.gz --dry-run
 ```
 
 ---

@@ -1,0 +1,22 @@
+project: genomic-data-pipeline
+work_dir: output/work
+raw_data_dir: data/raw
+results_dir: output/results
+reference:
+  genome: hg38
+  fasta: data/reference/hg38.fa
+  known_sites_vcf: data/reference/known-sites.vcf.gz
+quality:
+  min_total_sequences: 1000
+  max_failed_checks: 2
+  fastqc_threads: 2
+alignment:
+  threads: 4
+variant_calling:
+  caller: gatk
+  threads: 4
+annotation:
+  engine: vep
+storage:
+  output_format: parquet
+  cloud_uri: s3://example-bucket/genomics/

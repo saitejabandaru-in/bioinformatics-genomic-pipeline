@@ -1,0 +1,13 @@
+references:
+  hg38:
+    name: GRCh38 / hg38
+    fasta: data/reference/hg38.fa
+    bwa_index_prefix: data/reference/hg38.fa
+    snpeff_database: GRCh38.99
+    vep_cache: data/reference/vep
+  hg19:
+    name: GRCh37 / hg19
+    fasta: data/reference/hg19.fa
+    bwa_index_prefix: data/reference/hg19.fa
+    snpeff_database: GRCh37.75
+    vep_cache: data/reference/vep
